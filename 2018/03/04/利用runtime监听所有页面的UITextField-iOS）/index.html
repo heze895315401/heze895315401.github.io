@@ -3,14 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title>利用runtime监听所有页面的UITextField (iOS） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="在开发iOS的过程中，我们都会遇到许多有UITextField的页面，有的页面还不只一个。当我们提交填写的表单时，都会判断，是不是每个输入框都填写完成。效果如下：  如上图，当页面输入框都输入完毕后，才能做下一步操作！但是要每个输入框页面都做判断的话，很麻烦! 所以我们可以利用runtime，提前在BaseViewController里面做好所有判断操作，让有输入框的界面继承Base,通过run">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用runtime监听所有页面的UITextField (iOS）">
+<meta property="og:url" content="http://yoursite.com/2018/03/04/利用runtime监听所有页面的UITextField-iOS）/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在开发iOS的过程中，我们都会遇到许多有UITextField的页面，有的页面还不只一个。当我们提交填写的表单时，都会判断，是不是每个输入框都填写完成。效果如下：  如上图，当页面输入框都输入完毕后，才能做下一步操作！但是要每个输入框页面都做判断的话，很麻烦! 所以我们可以利用runtime，提前在BaseViewController里面做好所有判断操作，让有输入框的界面继承Base,通过run">
+<meta property="og:image" content="http://img.blog.csdn.net/20180303003453784">
+<meta property="og:updated_time" content="2018-03-04T09:00:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="利用runtime监听所有页面的UITextField (iOS）">
+<meta name="twitter:description" content="在开发iOS的过程中，我们都会遇到许多有UITextField的页面，有的页面还不只一个。当我们提交填写的表单时，都会判断，是不是每个输入框都填写完成。效果如下：  如上图，当页面输入框都输入完毕后，才能做下一步操作！但是要每个输入框页面都做判断的话，很麻烦! 所以我们可以利用runtime，提前在BaseViewController里面做好所有判断操作，让有输入框的界面继承Base,通过run">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20180303003453784">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +65,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-利用runtime监听所有页面的UITextField-iOS）" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-利用runtime监听所有页面的UITextField-iOS）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/03/04/利用runtime监听所有页面的UITextField-iOS）/" class="article-date">
   <time datetime="2018-03-04T07:24:42.000Z" itemprop="datePublished">2018-03-04</time>
@@ -74,8 +78,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/04/利用runtime监听所有页面的UITextField-iOS）/">利用runtime监听所有页面的UITextField (iOS）</a>
+    <h1 class="article-title" itemprop="name">
+      利用runtime监听所有页面的UITextField (iOS）
     </h1>
   
 
@@ -107,10 +111,9 @@
     </footer>
   </div>
   
-</article>
-
-
+    
   
+</article>
 
 </section>
         
