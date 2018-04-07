@@ -232,6 +232,138 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/07/贝塞尔曲线绘制时刻速度表-iOS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小何子">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/WechatIMG8.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="白日梦想家">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/07/贝塞尔曲线绘制时刻速度表-iOS/" itemprop="url">贝塞尔曲线绘制时刻速度表(iOS)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-07T21:04:52+08:00">
+                2018-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>最近新入职了一家公司！ 接手了一个新的app！ 尼玛！因为项目以前是外包的!!!  巨多坑！！！  各种BUG！！！ 心里就两个想法，要么走，要么重构！！！ （那当然是老老实实重构咯  哈哈  混口饭吃不容易）！！！</p>
+<p>前两天产品经理提了个需求！是以前外包没做出来的！如下图:<br><img src="/img/iOS/demo.png" alt="示例"></p>
+<p>好吧！并不难是吧！<br>这个需求有多种实现方法！这篇博客我先用最容易理解的方式写个demo</p>
+<p>首先看到这个图立马想到的逻辑是那几点：<br>对头，就是！<br>画线！画线！画线！<br>画不同颜色的线！！！<br>每条线的起点和终点要对应！！！</p>
+<p>我们现在实现第一部！<br>画其中一天效果：<br>这个逻辑很简单！首先一天等于1440分钟，那么我们就把一条view分成1440等分！每天能有四种不同的状态：小于40km/h（蓝色） 40-90km/h（绿色） 大于90km/h（红色） 静止（灰色）<br>我们可以直接将view设置成灰色，那么我们就只剩下三种颜色处理！<br>在用贝塞尔曲线画出对应的点线（和没分钟想对应，例如今天的0点到2点速度超过了90km/h）如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">UIColor *color = [UIColor colorWithRed:254/255.0 green:40/255.0 blue:69/255.0 alpha:1];</span><br><span class="line">[color <span class="built_in">set</span>];</span><br><span class="line"><span class="built_in">float</span> X1= 0 /4.8 ; //这里为什么除以4.8  自己想哈</span><br><span class="line"><span class="built_in">float</span> X2= 120 /4.8;</span><br><span class="line">UIBezierPath* path = [UIBezierPath bezierPath];</span><br><span class="line">[path moveToPoint:CGPointMake(X1, self.bounds.size.height/2)];</span><br><span class="line">[path addLineToPoint:CGPointMake(X2, self.bounds.size.height/2)];</span><br><span class="line">path.lineWidth = self.bounds.size.height;</span><br><span class="line">[path stroke];</span><br></pre></td></tr></table></figure>
+<p>以此类推！是不是超级简单！！！<br>不就是你几点到几点是什么速度，我对应着贝塞尔曲线画一个对应的点就行了呗！！！在换个颜色就OK了</p>
+<p>另外要提一点是！ 贝塞尔曲线是在drawRect方法绘制的！ 视图第一次调drawRect方法的时候，你的model数据还没赋值！所以要到model赋值的后调一下setNeedsDisplay，让drawRect重调一次!</p>
+<p>最后还可以加一个简单的动画什么的！！！ 最后效果大概是这样的:<br><img src="/img/iOS/demo.gif" alt="动图"></p>
+<p>以上的方法是用多段内塞尔曲线绘制相对应的方法！是个便于大家理解的方法！！！ 过两天会更新一个用一条贝塞尔曲线绘制不同的颜色渐变效果，加上一个核心动画！ 逼格和难度会稍稍加高点！</p>
+<p>demo地址：<a href="https://github.com/zezeyu/travelRange-demo" target="_blank" rel="noopener">https://github.com/zezeyu/travelRange-demo</a></p>
+<p>谢谢观看！！！</p>
+<p>结尾: 如果你喜欢的这篇文章，扫描以下二维码，加我微信，给我小额赞赏  哈哈<br><img src="/img/iOS/WechatIMG15.jpeg" alt="微信"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/利用runtime监听所有页面的UITextField-iOS）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -402,7 +534,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
