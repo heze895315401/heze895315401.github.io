@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="virtualenv是Django很好的工具，能帮助我们管理虚拟环境。下面是在mac下如何安装使用 ####安装virtualenv 1sudo pip install virtualenv 安装完成过后发现virtualenv用起来不是那么的方便，操作起来挺复杂的。 virtualenvwrapper 使得virtualenv变得更好用，所以我们一起安装了。 ####安装virtualenvwr">
+<meta name="description" content="virtualenv是Django很好的工具，能帮助我们管理虚拟环境。下面是在mac下如何安装使用 安装virtualenv1sudo pip install virtualenv 安装完成过后发现virtualenv用起来不是那么的方便，操作起来挺复杂的。 virtualenvwrapper 使得virtualenv变得更好用，所以我们一起安装了。 安装virtualenvwrapper1sud">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mac下安装virtualenv，以及安装virtualenvwrapper出错解决方案">
 <meta property="og:url" content="http://yoursite.com/2018/04/17/mac下安装virtualenv，以及安装virtualenvwrapper出错解决方案/index.html">
 <meta property="og:site_name" content="白日梦想家">
-<meta property="og:description" content="virtualenv是Django很好的工具，能帮助我们管理虚拟环境。下面是在mac下如何安装使用 ####安装virtualenv 1sudo pip install virtualenv 安装完成过后发现virtualenv用起来不是那么的方便，操作起来挺复杂的。 virtualenvwrapper 使得virtualenv变得更好用，所以我们一起安装了。 ####安装virtualenvwr">
+<meta property="og:description" content="virtualenv是Django很好的工具，能帮助我们管理虚拟环境。下面是在mac下如何安装使用 安装virtualenv1sudo pip install virtualenv 安装完成过后发现virtualenv用起来不是那么的方便，操作起来挺复杂的。 virtualenvwrapper 使得virtualenv变得更好用，所以我们一起安装了。 安装virtualenvwrapper1sud">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-17T15:50:14.000Z">
+<meta property="og:updated_time" content="2018-04-17T15:52:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac下安装virtualenv，以及安装virtualenvwrapper出错解决方案">
-<meta name="twitter:description" content="virtualenv是Django很好的工具，能帮助我们管理虚拟环境。下面是在mac下如何安装使用 ####安装virtualenv 1sudo pip install virtualenv 安装完成过后发现virtualenv用起来不是那么的方便，操作起来挺复杂的。 virtualenvwrapper 使得virtualenv变得更好用，所以我们一起安装了。 ####安装virtualenvwr">
+<meta name="twitter:description" content="virtualenv是Django很好的工具，能帮助我们管理虚拟环境。下面是在mac下如何安装使用 安装virtualenv1sudo pip install virtualenv 安装完成过后发现virtualenv用起来不是那么的方便，操作起来挺复杂的。 virtualenvwrapper 使得virtualenv变得更好用，所以我们一起安装了。 安装virtualenvwrapper1sud">
 
 
 
@@ -313,16 +313,13 @@
 
       
         <p>virtualenv是Django很好的工具，能帮助我们管理虚拟环境。下面是在mac下如何安装使用</p>
-<p>####安装virtualenv</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenv</span><br></pre></td></tr></table></figure>
+<h4 id="安装virtualenv"><a href="#安装virtualenv" class="headerlink" title="安装virtualenv"></a>安装virtualenv</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenv</span><br></pre></td></tr></table></figure>
 <p>安装完成过后发现virtualenv用起来不是那么的方便，操作起来挺复杂的。</p>
 <p>virtualenvwrapper 使得virtualenv变得更好用，所以我们一起安装了。</p>
-<p>####安装virtualenvwrapper</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenvwrapper</span><br></pre></td></tr></table></figure>
+<h4 id="安装virtualenvwrapper"><a href="#安装virtualenvwrapper" class="headerlink" title="安装virtualenvwrapper"></a>安装virtualenvwrapper</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenvwrapper</span><br></pre></td></tr></table></figure>
 <p>结果问题就来了，报错了，提示如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Exception:</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/basecommand.py"</span>, line 215, <span class="keyword">in</span> main</span><br><span class="line">    status = self.run(options, args)</span><br><span class="line">  File <span class="string">"/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/commands/install.py"</span>, line 342, <span class="keyword">in</span> run</span><br><span class="line">    prefix=options.prefix_path,</span><br><span class="line">  File <span class="string">"/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/req/req_set.py"</span>, line 778, <span class="keyword">in</span> install</span><br><span class="line">    requirement.uninstall(auto_confirm=True)</span><br><span class="line">  File <span class="string">"/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/req/req_install.py"</span>, line 754, <span class="keyword">in</span> uninstall</span><br><span class="line">    paths_to_remove.remove(auto_confirm)</span><br><span class="line">  File <span class="string">"/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/req/req_uninstall.py"</span>, line 115, <span class="keyword">in</span> remove</span><br><span class="line">    renames(path, new_path)</span><br><span class="line">  File <span class="string">"/Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg/pip/utils/__init__.py"</span>, line 267, <span class="keyword">in</span> renames</span><br><span class="line">    shutil.move(old, new)</span><br><span class="line">  File <span class="string">"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py"</span>, line 302, <span class="keyword">in</span> move</span><br><span class="line">    copy2(src, real_dst)</span><br><span class="line">  File <span class="string">"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py"</span>, line 131, <span class="keyword">in</span> copy2</span><br><span class="line">    copystat(src, dst)</span><br><span class="line">  File <span class="string">"/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py"</span>, line 103, <span class="keyword">in</span> copystat</span><br><span class="line">    os.chflags(dst, st.st_flags)</span><br><span class="line">OSError: [Errno 1] Operation not permitted: <span class="string">'/tmp/pip-wUnCGE-uninstall/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/six-1.4.1-py2.7.egg-info'</span></span><br></pre></td></tr></table></figure>
-<p>####解决办法</p>
-<p>原因是因为six的版本过低，所以在原来的安装命令下添加 ‘–ignore-install six’ 参数，如下：</p>
+<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>原因是因为six的版本过低，所以在原来的安装命令下添加 ‘–ignore-install six’ 参数，如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pip install virtualenvwrapper -v --ignore-install six</span><br></pre></td></tr></table></figure>
 <p>最后检查six的版本，发现已更新到最新版本，如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip show six</span><br></pre></td></tr></table></figure>
@@ -446,8 +443,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -510,6 +516,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装virtualenv"><span class="nav-number">1.</span> <span class="nav-text">安装virtualenv</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装virtualenvwrapper"><span class="nav-number">2.</span> <span class="nav-text">安装virtualenvwrapper</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决办法"><span class="nav-number">3.</span> <span class="nav-text">解决办法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
