@@ -81,17 +81,21 @@
 
 
 
-<meta name="description" content="本篇不属于技术博客！就想和大家日哈白！讲讲我这两年几个月的工作经历！遇到的一些奇葩人，奇葩事！本人大学学的计算机专业！ 说起这个专业，哼！我压根就不是准备报这个专业的，尼玛当时手残眼瞎！我特妈以为毕业了是去山里炸山洞！爬电线杆子！挖隧道的呢！想想多高大上，炸山洞啊。。。多么牛逼。。。    大学上的第一节课！ 沃日  老师哪了个机箱子过来了！这是要干嘛！！！ 这节课下来，我尼玛算是知道了，沃日 选">
+<meta name="description" content="前言之前写过一篇关于贝塞尔曲线绘制时刻速度表的文章！之前的文章是在drawRect使用贝塞尔曲线绘制图表！本篇主要讲述CAShapeLayer与贝塞尔曲线的结合使用！CAShapeLayer与drawRect的优缺点 ####CAShapeLayerCAShapeLayer继承自CALayer，因此，可使用CALayer的所有属性。CAShapeLayer属于CoreAnimation框架，通过G">
 <meta property="og:type" content="article">
-<meta property="og:title" content="工作随记">
-<meta property="og:url" content="http://yoursite.com/2018/04/18/工作随记/index.html">
+<meta property="og:title" content="CAShapeLayer与贝塞尔曲线的结合使用">
+<meta property="og:url" content="http://yoursite.com/2018/04/28/CAShapeLayer与贝塞尔曲线的结合使用/index.html">
 <meta property="og:site_name" content="白日梦想家">
-<meta property="og:description" content="本篇不属于技术博客！就想和大家日哈白！讲讲我这两年几个月的工作经历！遇到的一些奇葩人，奇葩事！本人大学学的计算机专业！ 说起这个专业，哼！我压根就不是准备报这个专业的，尼玛当时手残眼瞎！我特妈以为毕业了是去山里炸山洞！爬电线杆子！挖隧道的呢！想想多高大上，炸山洞啊。。。多么牛逼。。。    大学上的第一节课！ 沃日  老师哪了个机箱子过来了！这是要干嘛！！！ 这节课下来，我尼玛算是知道了，沃日 选">
+<meta property="og:description" content="前言之前写过一篇关于贝塞尔曲线绘制时刻速度表的文章！之前的文章是在drawRect使用贝塞尔曲线绘制图表！本篇主要讲述CAShapeLayer与贝塞尔曲线的结合使用！CAShapeLayer与drawRect的优缺点 ####CAShapeLayerCAShapeLayer继承自CALayer，因此，可使用CALayer的所有属性。CAShapeLayer属于CoreAnimation框架，通过G">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-17T18:55:31.000Z">
+<meta property="og:image" content="http://yoursite.com/img/iOS/demo.png">
+<meta property="og:image" content="http://yoursite.com/img/iOS/4y28r.gif">
+<meta property="og:image" content="http://yoursite.com/img/iOS/sulv.png">
+<meta property="og:updated_time" content="2018-04-28T15:18:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="工作随记">
-<meta name="twitter:description" content="本篇不属于技术博客！就想和大家日哈白！讲讲我这两年几个月的工作经历！遇到的一些奇葩人，奇葩事！本人大学学的计算机专业！ 说起这个专业，哼！我压根就不是准备报这个专业的，尼玛当时手残眼瞎！我特妈以为毕业了是去山里炸山洞！爬电线杆子！挖隧道的呢！想想多高大上，炸山洞啊。。。多么牛逼。。。    大学上的第一节课！ 沃日  老师哪了个机箱子过来了！这是要干嘛！！！ 这节课下来，我尼玛算是知道了，沃日 选">
+<meta name="twitter:title" content="CAShapeLayer与贝塞尔曲线的结合使用">
+<meta name="twitter:description" content="前言之前写过一篇关于贝塞尔曲线绘制时刻速度表的文章！之前的文章是在drawRect使用贝塞尔曲线绘制图表！本篇主要讲述CAShapeLayer与贝塞尔曲线的结合使用！CAShapeLayer与drawRect的优缺点 ####CAShapeLayerCAShapeLayer继承自CALayer，因此，可使用CALayer的所有属性。CAShapeLayer属于CoreAnimation框架，通过G">
+<meta name="twitter:image" content="http://yoursite.com/img/iOS/demo.png">
 
 
 
@@ -121,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/18/工作随记/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/28/CAShapeLayer与贝塞尔曲线的结合使用/"/>
 
 
 
 
 
-  <title>工作随记 | 白日梦想家</title>
+  <title>CAShapeLayer与贝塞尔曲线的结合使用 | 白日梦想家</title>
   
 
 
@@ -234,7 +238,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/工作随记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/28/CAShapeLayer与贝塞尔曲线的结合使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小盒子">
@@ -251,7 +255,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">工作随记</h1>
+          <h1 class="post-title" itemprop="name headline">CAShapeLayer与贝塞尔曲线的结合使用</h1>
         
 
         <div class="post-meta">
@@ -263,8 +267,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-18T01:55:27+08:00">
-                2018-04-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-28T22:04:56+08:00">
+                2018-04-28
               </time>
             
 
@@ -301,18 +305,19 @@
       
 
       
-        <h4 id="本篇不属于技术博客！就想和大家日哈白！讲讲我这两年几个月的工作经历！遇到的一些奇葩人，奇葩事！"><a href="#本篇不属于技术博客！就想和大家日哈白！讲讲我这两年几个月的工作经历！遇到的一些奇葩人，奇葩事！" class="headerlink" title="本篇不属于技术博客！就想和大家日哈白！讲讲我这两年几个月的工作经历！遇到的一些奇葩人，奇葩事！"></a>本篇不属于技术博客！就想和大家日哈白！讲讲我这两年几个月的工作经历！遇到的一些奇葩人，奇葩事！</h4><p>本人大学学的计算机专业！ 说起这个专业，哼！我压根就不是准备报这个专业的，尼玛当时手残眼瞎！我特妈以为毕业了是去山里炸山洞！爬电线杆子！挖隧道的呢！想想多高大上，炸山洞啊。。。多么牛逼。。。   </p>
-<p>大学上的第一节课！ 沃日  老师哪了个机箱子过来了！这是要干嘛！！！ 这节课下来，我尼玛算是知道了，沃日 选错专业了！ 极度不开心。。。</p>
-<p>当时我是我们班的纪检委员！牛逼吧！！！ 既然强行要我当了干部！ 那我肯定要发挥作用啊！ 😀 天天叫他们一起通宵打lol。。。 那日子过的真销魂！</p>
-<p>就这样我这个渣渣要毕业了</p>
-<h4 id="第一家公司"><a href="#第一家公司" class="headerlink" title="第一家公司"></a>第一家公司</h4><p>人生第一份offer让人记忆犹新！！！ 拿到offer的那一刻，脑子里全是：握草！居然有人敢要我！<br>当时找工作就找了三天！真是幸运，一家外包公司，给的待遇还不错，对于一个当时没毕业的渣渣来说！简直棒！！！<br>上班前两天！我一直担心被人开除！因为实在是太菜了！所以我提前内推了我的基友大佬逼来我们公司（大佬逼当时在我们班算是有点厉害的吧）</p>
-<p>开始上班了！第一天，分配任务！是一个电商的项目！看了看UI图，当时直接懵逼了！害怕！有是购物车。有是收藏列表的！不是说给个很小的项目的吗！任务好艰巨！当时负责这个项目的人是我和阿逼还有我之后的老大(瞎牛逼，碰巧还是我老乡！我也不知道我运气为啥一直这么好！)<br>刚开始上班的那段时间，真让人难受！啥都不会，怎么办啊！这要被开除的啊！于是每天请大佬们吃饭！边吃饭边写代码问问题！晚上回家强行把老朱(我大学专业老师，瞎牛逼，什么都会！现在被传智博客高薪挖去讲java架构)电话叫醒控屏教我写代码！</p>
-<p>就这样工作了两个星期！有一天我换了一个方法，没提交svn，也忘记了告诉阿逼！导致了一个模块的闪退崩溃！公司把我们两个都开了  哈哈哈哈  真开了！！  当时的感想是：握草终于解脱了，去打lol去，开心死了！(当时想法还是太幼稚了吧)</p>
-<p>正当开心的时候！老徐（我们武汉这边负责人，人很好！）把我叫了回去谈话！ 老徐跟我说：我想你个机会，你就留在公司好好学习下，我看你人很阳光，性格也好，你考虑下。<br>我说：不不不！ 感谢您的好意！我太菜了，在这里受不了！（哈哈哈 当时是把工作当好玩）<br>这时候孙总（我老大，关系蛮好）进来了：你不会我来带你！你要你肯学！你自己想想！</p>
-<p>就这样我还居然还考虑了很久！咨询了我姐姐的意见！最后留在了公司！（感谢孙总、感谢老徐）</p>
-<p>就这样日常给自己加班！渐渐的慢慢会了不好！记得我的第一个app上线的那天！晚上在家发版一直不成功，差点咳出肺炎！更坑的事最后查看邮件！原因是Xcode中毒了，握草！！！  下了一个新版的Xcode终于发布成功了！我艹 开心死了</p>
-<p>好景不长 待了4个月的时候！尼玛刚转正，公司不行了！要垮了！ 都是个傻逼CEO 张涛 张涛 张涛 乱整应是每个客户都得罪了！我去 到后来欠了我2个月工资，3个月社保！！！ 差点没饿死</p>
-<h5 id="我去不知不觉转钟3点了！搞兴奋了！明天还有上班！不说了！-未完待续。。。"><a href="#我去不知不觉转钟3点了！搞兴奋了！明天还有上班！不说了！-未完待续。。。" class="headerlink" title="我去不知不觉转钟3点了！搞兴奋了！明天还有上班！不说了！  未完待续。。。"></a>我去不知不觉转钟3点了！搞兴奋了！明天还有上班！不说了！  未完待续。。。</h5><p>如果你喜欢我的文章，在下面给我点小额打赏😀</p>
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>之前写过一篇关于贝塞尔曲线绘制时刻速度表的文章！之前的文章是在drawRect使用贝塞尔曲线绘制图表！本篇主要讲述CAShapeLayer与贝塞尔曲线的结合使用！CAShapeLayer与drawRect的优缺点</p>
+<p>####CAShapeLayer<br>CAShapeLayer继承自CALayer，因此，可使用CALayer的所有属性。CAShapeLayer属于CoreAnimation框架，通过GPU来渲染图形，节省性能。动画渲染直接提交给手机GPU，不消耗内。<br>CAShapeLayer能根据贝塞尔曲线的path路径来绘制你想要的图形！<br>CAShapeLayer给我们绘制自定义组件，自定义动画起到了关键作用！</p>
+<h5 id="CAShapeLayer主要属性使用"><a href="#CAShapeLayer主要属性使用" class="headerlink" title="CAShapeLayer主要属性使用"></a>CAShapeLayer主要属性使用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">frame               //就是frame啦</span><br><span class="line">strokeColor         //边缘线的颜色 （CGColor）</span><br><span class="line">fillColor           //闭环填充的颜色（CGColor）</span><br><span class="line">lineCap             //边缘线的类型</span><br><span class="line">path                //从bezier曲线获取到的形状</span><br><span class="line">lineWidth           //线条宽度</span><br><span class="line">strokeStart         //CGFloat类型，[0,1]表示画边线的起点和终点（即在路径上的百分比）</span><br><span class="line">strokeEnd           //CGFloat类型，[0,1]表示画边线的起点和终点（即在路径上的百分比）</span><br><span class="line">lineDashPattern     //设置边线的样式</span><br><span class="line">lineDashPhase       //边线样式的起始位置</span><br></pre></td></tr></table></figure>
+<h4 id="DrawRect"><a href="#DrawRect" class="headerlink" title="DrawRect"></a>DrawRect</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (void)drawRect:(CGRect)rect &#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>drawRect 是view的一个方法，可以帮我们绘制图形。DrawRect属于CoreGraphic框架，占用CPU，消耗性能大。只能在view里面使用！<br>想在其他地方重调drawRect方法时需要调用setNeedsDisplay方法，让drawRect方法重新调用一次。</p>
+<h4 id="CAShapeLayer和DrawRect比较"><a href="#CAShapeLayer和DrawRect比较" class="headerlink" title="CAShapeLayer和DrawRect比较"></a>CAShapeLayer和DrawRect比较</h4><p>CAShapeLayer性能更卓越，渲染快速，高效使用内存。不会被图层边界剪裁掉。<br>DrawRect占用CPU，消耗性能大。</p>
+<h4 id="CAShapeLayer与贝塞尔曲线的使用（上代码）"><a href="#CAShapeLayer与贝塞尔曲线的使用（上代码）" class="headerlink" title="CAShapeLayer与贝塞尔曲线的使用（上代码）"></a>CAShapeLayer与贝塞尔曲线的使用（上代码）</h4><p><img src="/img/iOS/demo.png" alt="示例"></p>
+<p>还是拿上面的这个需求为例子！</p>
+<p>首先第一部！<br>对还是画线、画线、根据数据画不同颜色的线<br>绘制贝塞尔曲线，上代码！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (UIBezierPath *)startPoint:(CGFloat)startPoint_X addLineTo_Point:(CGFloat)linePoint_X</span><br><span class="line">&#123;</span><br><span class="line">    UIBezierPath *path = [UIBezierPath bezierPath];</span><br><span class="line">    path.lineWidth = self.bounds.size.height;</span><br><span class="line">    [path moveToPoint:CGPointMake(startPoint_X, self.bounds.size.height/2)];//起始点</span><br><span class="line">    [path addLineToPoint:CGPointMake(linePoint_X, self.bounds.size.height/2)];//结束点</span><br><span class="line">    return path;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后下一部！<br>把贝塞尔曲线路径交给CAShapeLayer<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">- (CAShapeLayer *)createShapeLayer:(UIColor *)color startPoint:(CGFloat)startPoint_X addLineTo_Point:(CGFloat)linePoint_X</span><br><span class="line">&#123;</span><br><span class="line">    UIBezierPath *path = [UIBezierPath bezierPath];</span><br><span class="line">    path.lineWidth = self.bounds.size.height;</span><br><span class="line">    [path moveToPoint:CGPointMake(startPoint_X, self.bounds.size.height/2)];</span><br><span class="line">    [path addLineToPoint:CGPointMake(linePoint_X, self.bounds.size.height/2)];</span><br><span class="line">    </span><br><span class="line">    ///顺便给路径加一个动画</span><br><span class="line">    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@&quot;strokeEnd&quot;];</span><br><span class="line">    animation.duration = 1;//动画时间</span><br><span class="line">    animation.fromValue = @(0);</span><br><span class="line">    animation.toValue = @(1);</span><br><span class="line">    animation.repeatCount = 1;//只执行一次</span><br><span class="line">    </span><br><span class="line">    CAShapeLayer *layer = [CAShapeLayer layer];</span><br><span class="line">    layer.path = path.CGPath;//关键代码，把贝塞尔曲线路径交给CAShapeLayer</span><br><span class="line">    layer.strokeColor = color.CGColor;</span><br><span class="line">    //设置填充色</span><br><span class="line">    layer.lineWidth = self.bounds.size.height;</span><br><span class="line">    layer.fillColor = color.CGColor;</span><br><span class="line">    [layer addAnimation:animation forKey:@&quot;strokeEndAnimation&quot;];</span><br><span class="line">    //添加到视图的layer上面</span><br><span class="line">    [self.layer addSublayer:layer];</span><br><span class="line">    </span><br><span class="line">    return layer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>最后在根据数据去加载显示<br>下图是最后结果样式!<br><img src="/img/iOS/4y28r.gif" alt="动图">  <img src="/img/iOS/sulv.png" alt="示例2"></p>
+<h4 id="demo地址"><a href="#demo地址" class="headerlink" title="demo地址"></a>demo地址</h4><p>demo地址：<a href="https://github.com/zezeyu/travelRange-demo" target="_blank" rel="noopener">https://github.com/zezeyu/travelRange-demo</a><br>你们的Star是我最大的动力 哈哈 给颗星星鼓励一下咯!</p>
+<p>谢谢观看！！！</p>
 
       
     </div>
@@ -366,8 +371,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/18/使用hexo搭建个人github主页/" rel="next" title="使用hexo搭建个人github主页">
-                <i class="fa fa-chevron-left"></i> 使用hexo搭建个人github主页
+              <a href="/2018/04/18/工作随记/" rel="next" title="工作随记">
+                <i class="fa fa-chevron-left"></i> 工作随记
               </a>
             
           </div>
@@ -375,10 +380,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/28/CAShapeLayer与贝塞尔曲线的结合使用/" rel="prev" title="CAShapeLayer与贝塞尔曲线的结合使用">
-                CAShapeLayer与贝塞尔曲线的结合使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -518,7 +519,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#本篇不属于技术博客！就想和大家日哈白！讲讲我这两年几个月的工作经历！遇到的一些奇葩人，奇葩事！"><span class="nav-number">1.</span> <span class="nav-text">本篇不属于技术博客！就想和大家日哈白！讲讲我这两年几个月的工作经历！遇到的一些奇葩人，奇葩事！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第一家公司"><span class="nav-number">2.</span> <span class="nav-text">第一家公司</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#我去不知不觉转钟3点了！搞兴奋了！明天还有上班！不说了！-未完待续。。。"><span class="nav-number">2.1.</span> <span class="nav-text">我去不知不觉转钟3点了！搞兴奋了！明天还有上班！不说了！  未完待续。。。</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CAShapeLayer主要属性使用"><span class="nav-number">1.1.</span> <span class="nav-text">CAShapeLayer主要属性使用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DrawRect"><span class="nav-number">2.</span> <span class="nav-text">DrawRect</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CAShapeLayer和DrawRect比较"><span class="nav-number">3.</span> <span class="nav-text">CAShapeLayer和DrawRect比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CAShapeLayer与贝塞尔曲线的使用（上代码）"><span class="nav-number">4.</span> <span class="nav-text">CAShapeLayer与贝塞尔曲线的使用（上代码）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#demo地址"><span class="nav-number">5.</span> <span class="nav-text">demo地址</span></a></li></ol></div>
             
 
           </div>
