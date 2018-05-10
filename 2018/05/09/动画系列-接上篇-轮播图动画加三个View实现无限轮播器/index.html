@@ -81,18 +81,19 @@
 
 
 
-<meta name="description" content="前言本篇文章是接上篇文章的需求，完善第二个控制器的功能！需要的效果如下：  如上图本次的功能点是轮播图的点位切换、大小渐变！和无限轮播器（三个View实现无限轮播） 未完待续(要睡觉了 哈哈哈)你可以先去看看我的demo吧demo地址：https://github.com/zezeyu/rotation">
+<meta name="description" content="前言本篇文章是接上篇文章的需求，完善第二个控制器的功能！需要的效果如下：  如上图本次的功能点是轮播图的点位切换、大小渐变！和无限轮播器（三个View实现无限轮播） 逻辑1.当中间的View向左边或右边滑动时，中间的的middleImageView会随着偏移量变小，右边或左边的图片变大！它们的大小会互换！ 未完待续(要睡觉了 哈哈哈)你可以先去看看我的demo吧demo地址：https://git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动画系列--接上篇 轮播图动画加三个View实现无限轮播器">
 <meta property="og:url" content="http://yoursite.com/2018/05/09/动画系列-接上篇-轮播图动画加三个View实现无限轮播器/index.html">
 <meta property="og:site_name" content="白日梦想家">
-<meta property="og:description" content="前言本篇文章是接上篇文章的需求，完善第二个控制器的功能！需要的效果如下：  如上图本次的功能点是轮播图的点位切换、大小渐变！和无限轮播器（三个View实现无限轮播） 未完待续(要睡觉了 哈哈哈)你可以先去看看我的demo吧demo地址：https://github.com/zezeyu/rotation">
+<meta property="og:description" content="前言本篇文章是接上篇文章的需求，完善第二个控制器的功能！需要的效果如下：  如上图本次的功能点是轮播图的点位切换、大小渐变！和无限轮播器（三个View实现无限轮播） 逻辑1.当中间的View向左边或右边滑动时，中间的的middleImageView会随着偏移量变小，右边或左边的图片变大！它们的大小会互换！ 未完待续(要睡觉了 哈哈哈)你可以先去看看我的demo吧demo地址：https://git">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/img/iOS/animation2.gif">
-<meta property="og:updated_time" content="2018-05-09T15:26:23.000Z">
+<meta property="og:image" content="http://yoursite.com/img/iOS/lunbo.png">
+<meta property="og:updated_time" content="2018-05-10T15:57:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动画系列--接上篇 轮播图动画加三个View实现无限轮播器">
-<meta name="twitter:description" content="前言本篇文章是接上篇文章的需求，完善第二个控制器的功能！需要的效果如下：  如上图本次的功能点是轮播图的点位切换、大小渐变！和无限轮播器（三个View实现无限轮播） 未完待续(要睡觉了 哈哈哈)你可以先去看看我的demo吧demo地址：https://github.com/zezeyu/rotation">
+<meta name="twitter:description" content="前言本篇文章是接上篇文章的需求，完善第二个控制器的功能！需要的效果如下：  如上图本次的功能点是轮播图的点位切换、大小渐变！和无限轮播器（三个View实现无限轮播） 逻辑1.当中间的View向左边或右边滑动时，中间的的middleImageView会随着偏移量变小，右边或左边的图片变大！它们的大小会互换！ 未完待续(要睡觉了 哈哈哈)你可以先去看看我的demo吧demo地址：https://git">
 <meta name="twitter:image" content="http://yoursite.com/img/iOS/animation2.gif">
 
 
@@ -306,6 +307,7 @@
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇文章是接上篇文章的需求，完善第二个控制器的功能！<br>需要的效果如下：</p>
 <p><img src="/img/iOS/animation2.gif" alt="示例"></p>
 <p>如上图本次的功能点是轮播图的点位切换、大小渐变！和无限轮播器（三个View实现无限轮播）</p>
+<h3 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a>逻辑</h3><p><img src="/img/iOS/lunbo.png" alt="示例1"><br>1.当中间的View向左边或右边滑动时，中间的的middleImageView会随着偏移量变小，右边或左边的图片变大！它们的大小会互换！</p>
 <h3 id="未完待续-要睡觉了-哈哈哈"><a href="#未完待续-要睡觉了-哈哈哈" class="headerlink" title="未完待续(要睡觉了 哈哈哈)"></a>未完待续(要睡觉了 哈哈哈)</h3><p>你可以先去看看我的demo吧<br>demo地址：<a href="https://github.com/zezeyu/rotation" target="_blank" rel="noopener">https://github.com/zezeyu/rotation</a></p>
 
       
@@ -508,7 +510,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续-要睡觉了-哈哈哈"><span class="nav-number">2.</span> <span class="nav-text">未完待续(要睡觉了 哈哈哈)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#逻辑"><span class="nav-number">2.</span> <span class="nav-text">逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续-要睡觉了-哈哈哈"><span class="nav-number">3.</span> <span class="nav-text">未完待续(要睡觉了 哈哈哈)</span></a></li></ol></div>
             
 
           </div>
