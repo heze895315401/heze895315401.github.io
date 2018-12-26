@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-17T05:38:44.000Z</updated>
+  <updated>2018-12-26T15:13:38.926Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS push 转场动画</title>
+    <link href="http://yoursite.com/2018/12/26/iOS-push-animation/"/>
+    <id>http://yoursite.com/2018/12/26/iOS-push-animation/</id>
+    <published>2018-12-26T14:48:30.000Z</published>
+    <updated>2018-12-26T15:13:38.926Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>   iOS原生的push动画是从右往左的推过来的过渡动画，有些特殊的需求，我们就要去修改原生的push动画，那这个时候怎么做呢？<br>   有两种方法，以下就是介绍这两种方法的分别实现过程</p><h4 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h4><p><img src="/img/iOS/push_animation.gif" alt="示例"></p><h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>   瞌睡来了  我先睡觉了，明天来接着写。哈哈哈哈</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Inner Peace</title>
