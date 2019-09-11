@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="白日梦想家">
 <meta property="og:description" content="前言小组练习作业-门类的封装，用OC完成的。OC是强类型语言，方法不支持可选传参。OC一个类分为两个文件。 .h 和 .m  .h里面负责声明对象和方法，在.h声明的属性和方法可以被外部类调用。 .m负责实现和声明，在.m声明的属性和方法属于私有的，不可以被外部类使用。其中的self相当于你们的this。作业链接https://shimo.im/docs/Gxpkhc39c6HxWHyh/read">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-11T06:52:03.862Z">
+<meta property="og:updated_time" content="2019-09-11T07:06:38.009Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="门类的封装-OC">
 <meta name="twitter:description" content="前言小组练习作业-门类的封装，用OC完成的。OC是强类型语言，方法不支持可选传参。OC一个类分为两个文件。 .h 和 .m  .h里面负责声明对象和方法，在.h声明的属性和方法可以被外部类调用。 .m负责实现和声明，在.m声明的属性和方法属于私有的，不可以被外部类使用。其中的self相当于你们的this。作业链接https://shimo.im/docs/Gxpkhc39c6HxWHyh/read">
@@ -308,6 +308,7 @@
 <p>3、同时需要密码和faceId<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[HZDoorClass sharedInstance]set_Pin:@&quot;123456&quot; faceId:@&quot;123456&quot;];</span><br></pre></td></tr></table></figure></p>
 <p>4、开门的方法与回调结果（pin和faceId是非必传）<br>   1、需要回调<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[[HZDoorClass sharedInstance] openWithPin:_pinTextField.text faceId:_faceIdTextField.text openBlock:^(BOOL isOpen) &#123;</span><br><span class="line">     NSLog(@&quot;%@&quot;,isOpen?@&quot;门已经打开&quot;:@&quot;密码错误，门闭关&quot;);</span><br><span class="line"> &#125; alert:^&#123;</span><br><span class="line">     NSLog(@&quot;开始警报了&quot;);</span><br><span class="line"> &#125; autoClose:^&#123;</span><br><span class="line">     NSLog(@&quot;关闭！！！！&quot;);</span><br><span class="line"> &#125;];</span><br></pre></td></tr></table></figure></p>
 <p>   2、不需要回调<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[HZDoorClass sharedInstance] openWithPin:_pinTextField.text faceId:_faceIdTextField.text];</span><br></pre></td></tr></table></figure></p>
+<p>5、手动关闭门<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[HZDoorClass sharedInstance] _close];</span><br></pre></td></tr></table></figure></p>
 <h4 id="多多指点，不怎么会写文章，OC代码不懂的地方，Q我哈。"><a href="#多多指点，不怎么会写文章，OC代码不懂的地方，Q我哈。" class="headerlink" title="多多指点，不怎么会写文章，OC代码不懂的地方，Q我哈。"></a>多多指点，不怎么会写文章，OC代码不懂的地方，Q我哈。</h4>
       
     </div>
